@@ -1,10 +1,12 @@
 import React from 'react'
 import UserContext from './UserContext'
 
+// eslint-disable-next-line react/prop-types
 const UserContextProvider = ({children}) => {
     const [user,setUser]=React.useState(null);
+    const [age,setAge]=React.useState(null);
   return (
-    <UserContext.Provider value={{user,setUser}}>
+    <UserContext.Provider value={{user,setUser,age,setAge}}>
         {children}
     </UserContext.Provider>
   )
