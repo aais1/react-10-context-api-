@@ -8,7 +8,7 @@ const Home = () => {
   const [userAge , setUserAge] = React.useState('');
   return (
   <> 
-    { user ?
+    { user && age?
     <div className='flex flex-col items-center justify-center h-[80.79vh] font-bold bg-blue-300'>
     <div className='text-2xl;'>Hello <span className='text-3xl text-red-500'>{user}</span></div>
     <div className='text-2xl;'>Age  <span className='text-3xl text-red-500'>{age}</span></div>
