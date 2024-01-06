@@ -7,12 +7,14 @@ import Error404 from './components/Error404'
 import About from './pages/About'
 import { Route,createBrowserRouter,createRoutesFromElements,RouterProvider } from 'react-router-dom'
 import UserContextProvider from './context/UserContextProvider'
+import Post from './components/Post'
 
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='' element={<Layout/>} errorElement={<Error404/>} >
       <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>}/>
+      <Route path='/post/:id' element={<Post/> }/>
     </Route>
   )
 )
